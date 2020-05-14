@@ -1,0 +1,7 @@
+{
+  "name": "Dice Lan",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
