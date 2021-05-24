@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { HomePage } from './home.page';
-import { WebSocketServer } from "@ionic-native/web-socket-server/ngx";
+
 
 import { HomePageRoutingModule } from './home-routing.module';
 
@@ -15,7 +15,7 @@ import { HomePageRoutingModule } from './home-routing.module';
     IonicModule,
     HomePageRoutingModule
   ],
-  providers:[WebSocketServer],
+  providers:[],
   declarations: [HomePage]
 })
 export class HomePageModule {}

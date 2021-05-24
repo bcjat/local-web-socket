@@ -19,6 +19,7 @@ android {
 }
 
 repositories {
+    mavenCentral()
     flatDir{
         dirs '../capacitor-cordova-android-plugins/src/main/libs', 'libs'
     }
@@ -26,6 +27,7 @@ repositories {
 
 dependencies {
     implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation "org.java-websocket:Java-WebSocket:1.5.1"
     implementation "androidx.appcompat:appcompat:$androidxAppCompatVersion"
     implementation project(':capacitor-android')
     testImplementation "junit:junit:$junitVersion"

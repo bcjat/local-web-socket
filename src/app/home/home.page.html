@@ -1,24 +1,38 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Dice Roller
     </ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="exitApp()">
+        <ion-icon slot="icon-only" name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+
 
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button [disabled]="diceReady" (click)="getInterface()" size="large" expand="full" fill="solid" shape="round" color="success">
+      Get Interface
+    </ion-button>
+    <p>Total Connections: {{ uuids.length }} </p>
+    <p>{{uuids.toString()}}</p>
+    <p> {{ ipAddress }}</p>
+
+    <ion-button (click)="startServer()" expand="block" fill="solid" shape="round">
+      Start Server
+    </ion-button>
+
+    <ion-input type="text" placeholder="Awesome Input" [(ngModel)]="ipInput"></ion-input>
+    
+    <ion-button (click)="connectSocket()" expand="block" fill="solid" shape="round">
+      CONNECT
+    </ion-button>
+
+
   </div>
-  <div>{{log}}</div>
-  <ion-button (click)="initServer()" expand="block" fill="clear" shape="round">
-    Start Server
-  </ion-button>
+  
 </ion-content>
